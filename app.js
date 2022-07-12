@@ -32,7 +32,7 @@ app.post("/", function(req, res){
   const url = "https://us11.api.mailchimp.com/3.0/lists/c60f1e21ca"
   const options ={
     method:"POST",
-    auth:"pinak:61e4dcfcdacc31ade2fa2d76a37914ed-us11 "
+    auth:"pinak:61e4dcfcdacc31ade2fa2d76a37914ed-us11"
   }
     const request = https.request(url, options, function(response){
       if (response.statusCode === 200) {
@@ -45,6 +45,7 @@ app.post("/", function(req, res){
           console.log(res.statusCode)
     });
   });
+  // https://fast-cove-79453.herokuapp.com/
     request.write(jsondata);
     request.end();
   console.log(first + " " + last + " " + email);
